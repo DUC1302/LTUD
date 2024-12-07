@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo8.controller.DashboardController">
+    <!-- padding for AnchorPane using Insets -->
+    <AnchorPane.padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </AnchorPane.padding>
+
+    <VBox alignment="CENTER" spacing="20">
+        <!-- padding for VBox using Insets -->
+        <VBox.padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </VBox.padding>
+
+        <!-- Biểu đồ tổng quan -->
+        <PieChart fx:id="revenueChart" title="Doanh thu và Đơn hàng" />
+
+        <!-- Danh sách đơn hàng gần đây -->
+        <Label text="Đơn hàng gần đây" />
+        <ListView fx:id="orderListView" prefHeight="200" />
+
+        <!-- Thông báo -->
+        <Label text="Thông báo quan trọng" />
+        <TextArea fx:id="notificationArea" prefHeight="100" editable="false" wrapText="true" />
+
+        <!-- Các nút truy cập nhanh -->
+        <HBox spacing="10" alignment="CENTER">
+            <Button fx:id="manageProductsButton" text="Quản lý sản phẩm" />
+            <Button fx:id="manageOrdersButton" text="Quản lý đơn hàng" />
+            <Button fx:id="manageCustomersButton" text="Quản lý khách hàng" />
+            <Button fx:id="viewReportsButton" text="Xem báo cáo" />
+        </HBox>
+    </VBox>
+</AnchorPane>
